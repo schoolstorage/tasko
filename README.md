@@ -17,4 +17,7 @@ mix ecto.gen.migration user
 
 # run migrations
 mix ecto.migrate
+
+# create schema ( dto, manual is better )
+mix phx.gen.schema Accounts.User users name
 ```
