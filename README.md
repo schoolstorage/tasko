@@ -12,5 +12,9 @@ mix ecto.create
 # start dev server ( default: http://localhost:4000 )
 mix phx.server
 
+# create migration
+mix ecto.gen.migration user
 
+# run migrations
+mix ecto.migrate
 ```
