@@ -1,4 +1,4 @@
-defmodule Takso.Accounts.User do
+defmodule Takso.Dao.Schema.User do
   use Ecto.Schema
   import Ecto.Changeset
 
