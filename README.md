@@ -1,5 +1,5 @@
 # Takso
-```shell
+```elixir
 
 https://serokell.io/blog/introduction-to-phoenix
 
