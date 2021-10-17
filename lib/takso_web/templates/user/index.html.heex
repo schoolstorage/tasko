@@ -1,0 +1,23 @@
+<section class="phx-hero">
+  <h1>Application Users</h1>
+</section>
+
+<section class="row">
+  <table>
+    <tr class="row" >
+        <td>Full Name</td>
+        <td>Username</td>
+        <td>Operations</td>
+    </tr>
+    <%= for user <- @users do %>
+        <tr class="row" >
+          <td><%= user.name %></td>
+          <td><%= user.username %></td>
+          <td>
+            <span class="button" ><%= link "Edit", to: Routes.user_path(@conn, user.id) %></span>
+            <span><%= link "Delete", to: Routes.user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"], class: "button" %></span>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+</section>
