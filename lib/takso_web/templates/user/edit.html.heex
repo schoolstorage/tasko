@@ -1,0 +1,32 @@
+<section class="phx-hero">
+    <h1><%= @user.name %></h1>
+</section>
+
+<div class="container">
+    <form action="" >
+        <div class="row">
+            <div class="column column-25">Full Name</div>
+            <div class="column column-75">
+                <input type="text" name="name" value={@user.name} />
+            </div>
+        </div>
+        <div class="row">
+            <div class="column column-25">User Name</div>
+            <div class="column column-75">
+                <input type="text" name="username" value={@user.username} />
+            </div>
+        </div>
+        <div class="row">
+            <div class="column column-25">Password</div>
+            <div class="column column-75">
+                <input type="password" name="password" value={@user.password} />
+            </div>
+        </div>
+        <div class="row">
+            <div class="column column-75"> </div>
+            <div class="column column-25">
+                <button class="button" type="submit" >Save</button>
+            </div>
+        </div>
+    </form>
+</div>

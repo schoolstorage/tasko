@@ -7,8 +7,12 @@ defmodule TaksoWeb.UserController do
     render(conn, "index.html", users: UserService.list_users())
   end
 
-  def edit(conn, user_id) do
-    render(conn, "edit.html", users: UserService.get_user(user_id))
+  def edit(conn, %{"id" => id}) do
+    render(conn, "edit.html", user: UserService.get_user(id))
+  end
+
+  def index(conn, _params) do
+    render(conn, "index.html", users: UserService.list_users())
   end
 
 end

@@ -14,8 +14,23 @@
           <td><%= user.name %></td>
           <td><%= user.username %></td>
           <td>
-            <span class="button" ><%= link "Edit", to: Routes.user_path(@conn, user.id) %></span>
-            <span><%= link "Delete", to: Routes.user_path(@conn, :delete, user), method: :delete, data: [confirm: "Are you sure?"], class: "button" %></span>
+            <span>
+                <%=
+                    link "Edit",
+                    to: Routes.user_path(@conn, :edit, user),
+                    method: :get,
+                    class: "button"
+                %>
+            </span>
+            <span>
+                <%=
+                    link "Delete",
+                    to: Routes.user_path(@conn, :delete, user),
+                    method: :delete,
+                    data: [confirm: "Are you sure?"],
+                    class: "button"
+                %>
+            </span>
           </td>
         </tr>
     <% end %>
