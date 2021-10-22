@@ -6,6 +6,10 @@ https://serokell.io/blog/introduction-to-phoenix
 # create new project
 mix phx.new takso
 
+# update dependencies
+mix deps.get
+mix deps.compile
+
 # create database ( config/dev.exs )
 mix ecto.create
 
