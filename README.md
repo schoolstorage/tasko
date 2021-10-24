@@ -10,7 +10,9 @@ mix phx.new takso
 mix deps.get
 mix deps.compile
 
-# create database ( config/dev.exs )
+
+# create database ( config/dev[test].exs )
+MIX_ENV=test
 mix ecto.create
 
 # create migration
@@ -24,6 +26,7 @@ mix phx.gen.schema Accounts.User users name
 
 # run mix 
 iex -S mix
+recompile()
 
 # try services in console
 alias Takso.Dao.Service.UserService
