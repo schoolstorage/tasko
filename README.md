@@ -21,6 +21,9 @@ mix ecto.gen.migration user
 # run migrations
 mix ecto.migrate
 
+# populate with seeds
+mix run priv/repo/seeds.exs
+
 # create schema ( dto, manual is better )
 mix phx.gen.schema Accounts.User users name
 
