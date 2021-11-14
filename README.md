@@ -44,6 +44,7 @@ mix phx.server
 ```
 
 ## mvc works based on convention
+# list all routes: mix phx.routes
 1. lib/takso_web/router.ex
    1. resources "/users", UserController
 2. lib/takso_web/controllers/user_controller.ex
