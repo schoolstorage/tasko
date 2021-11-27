@@ -11,9 +11,9 @@ mix deps.get
 mix deps.compile
 
 
-# create database ( config/dev[test].exs )
+# create database ( config/dev[test].exs ) aliases are in mix.exs
 MIX_ENV=test
-mix ecto.create
+mix ecto.reset
 
 # create migration
 mix ecto.gen.migration user
@@ -62,11 +62,12 @@ mix white_bread.run
 
 
 
-
+MIX_ENV=test mix ecto.migrate
 MIX_ENV=test mix ecto.migrate
 MIX_ENV=test mix run priv/repo/seeds.exs
-MIX_ENV=test  mix white_bread.run
+MIX_ENV=test mix white_bread.run
 MIX_ENV=test mix phx.server
+MIX_ENV=test mix test
 :timer.sleep(5000)
 *************************************************************************************************************
 
